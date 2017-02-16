@@ -1,0 +1,60 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+function maxNum(num1, num2, num3){
+        var max = 0;
+        if((num1 >= num2) && (num1 >= num3)){
+            max = num1;
+        }
+        else if((num2 >= num1) && (num2 >= num3)){
+            max = num2;
+        }
+        else{
+            max = num3;
+        }
+    return max;
+    }
+
+	function minNum(num1, num2, num3){
+        var min = 0;
+        if((num1 <= num2) && (num1 <= num3)){
+            min = num1;
+        }
+        else if((num2 <= num1) && (num2 <= num3)){
+            min = num2;
+        }
+        else{
+            min = num3;
+        }
+    return min;
+    }
+	
+	function middleNum(num1, num2, num3){
+        var middle = 0;
+        if((num1 >= num2) && (num1 <= num3)){
+            middle = num1;
+        }
+        else if((num2 >= num1) && (num2 <= num3)){
+            middle = num2;
+        }
+        else{
+            middle = num3;
+        }
+    return middle;
+    }
+	
+	
+    var arr = []; 
+    for(i=0;i<3;i++){
+        arr[i] = parseInt(prompt("Enter a number"));
+    }
+
+
+    document.write("maximum number:" + maxNum.apply(this, arr));
+	document.write("minimum number:" + minNum.apply(this, arr));
+	document.write("middle number:" + middleNum.apply(this, arr));
+	</script>
+	</body>
+	</html>
